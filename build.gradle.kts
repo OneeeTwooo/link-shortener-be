@@ -51,9 +51,12 @@ allprojects {
     }
 
     rootProject.extra.set("springBootVersion", "3.3.4")
+    rootProject.extra.set("lombokVersion", "1.18.34")
+    rootProject.extra.set("commonsLang", "3.17.0")
+
     rootProject.extra.set("springBootStarterTest", "3.3.4")
     rootProject.extra.set("junit", "4.13.2")
-    rootProject.extra.set("lombokVersion", "1.18.34")
+    rootProject.extra.set("mockito", "5.14.1")
 
     dependencies {
         compileOnly("org.projectlombok:lombok:${rootProject.extra.get("lombokVersion")}")
