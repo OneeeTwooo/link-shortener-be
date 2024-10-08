@@ -2,7 +2,7 @@ plugins {
     id("java-library")
     id("idea")
     id("maven-publish")
-    id("org.springframework.boot") version "3.3.2" apply false
+    id("org.springframework.boot") version "3.3.4" apply false
     id("io.spring.dependency-management") version "1.1.6" apply true
 }
 
@@ -55,7 +55,6 @@ allprojects {
     rootProject.extra.set("junit", "4.13.2")
     rootProject.extra.set("lombokVersion", "1.18.34")
 
-
     dependencies {
         compileOnly("org.projectlombok:lombok:${rootProject.extra.get("lombokVersion")}")
         annotationProcessor("org.projectlombok:lombok:${rootProject.extra.get("lombokVersion")}")
@@ -69,9 +68,6 @@ allprojects {
             maven {
                 url = uri("https://repo.spring.io/milestone")
             }
-        }
-        dependencies {
-            classpath("com.diffplug.spotless:spotless-plugin-gradle:7.0.0.BETA2")
         }
     }
 }
